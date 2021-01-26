@@ -19,3 +19,13 @@ pictureName = "/home/pi/Desktop/gardenpi_files/pictures/Picture_"+datetime.datet
 camera.annotate_text = text
 sleep(5)
 camera.capture(pictureName)
+
+f = open("picturelist.txt","a")
+f.write("Picture_"+datetime.datetime.now().strftime("%m-%d-%y_%X")+".jpg\n")
+f.close()
+
+
+#camera.start_recording('/home/pi/Desktop/gardenpi_files/pictures/video.h264')
+#sleep(5)
+#camera.stop_recording()
+
