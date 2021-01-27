@@ -2,7 +2,7 @@
 #Change the duration of pump 1 and pump 2 here to the amount of water needed
 #Duration is counted per second
 
-pump1_duration = 2
+pump1_duration = 8
 pump2_duration = 2
 
 
@@ -53,7 +53,7 @@ def pump1On():
     time.sleep(pump1_duration)
     relay1.off()
     f = open("pumprecord.txt","a")
-    f.write(datetime.datetime.now().strftime("%x,%X,")+"Pump 1-"+str(pump1_duration)+"\n")
+    f.write(datetime.datetime.now().strftime("%x,%X,")+"Pump 1,"+str(pump1_duration)+"\n")
     f.close()
    
     
@@ -61,8 +61,8 @@ def pump2On():
     relay2.on()
     time.sleep(pump2_duration)
     relay2.off()
-    f = open("pumprecord.txt","a")
-    f.write(datetime.datetime.now().strftime("%x,%X,")+"Pump 2-"+str(pump2_duration)+"\n")
+    f = open("/home/pi/Desktop/gardenpi_files/pumprecord.txt","a")
+    f.write(datetime.datetime.now().strftime("%x,%X,")+"Pump 2,"+str(pump2_duration)+"\n")
     f.close()
 
 
@@ -73,4 +73,3 @@ allOffOnce()
 pump1On()
 rest()
 pump2On()
-

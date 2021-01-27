@@ -1,0 +1,38 @@
+>>>>>>>For Editing Time Schedule<<<<<<
+or the website guide: 
+https://www.raspberrypi.org/documentation/linux/usage/cron.md
+https://www.garron.me/en/linux/run-cronjob-every-5-five-minutes-hours.html
+
+1. Open command prompt or Terminal
+2. Type crontab -e
+3. Edit the values under
+-Water Pump Schedule
+-Humidity and Temperature Schedule
+-Camera Schedule
+4. Save after editing
+
+--Current Settings as of January 27, 2021
+
+-Water Pump Schedule
+--Pump1 -Daily 9am, 8 seconds
+--Pump2 -Daily 9am, 2 seconds
+
+-Humidity and Temperature Schedule
+--Daily, Every hour
+
+-Camera Schedule
+--Daily, every 9am and every 5pm
+
+>>>>>>>For Editing Pump Duration Schedule<<<<<<
+1. Open Python code on Desktop/gardenpi_files/waterpump.py
+2. Edit the parts below:
+---pump1_duration = 8
+---pump2_duration = 2
+Duration is in seconds
+3. Save File
+
+>>>>>>>View Activity Logs and Pictures<<<<<<
+1. Pump Activity logs are in /home/pi/Desktop/gardenpi_files/pumprecord.txt
+2. Humidy and Temperature logs are in /home/pi/Desktop/gardenpi_files/humidityandtemp.txt
+3. Pictures are saved in /home/pi/Desktop/gardenpi_files/pictures
+4. Picture Logs are in /home/pi/Desktop/gardenpi_files/picturelist.txt
