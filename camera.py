@@ -21,7 +21,6 @@ f = open("/home/pi/Desktop/gardenpi_files/picturelist.txt","a")
 f.write("Picture_"+datetime.datetime.now().strftime("%m-%d-%y_%X")+".jpg\n")
 f.close()
 camera.annotate_text = text
-sleep(5)
 camera.capture(pictureName)
 
 
