@@ -17,13 +17,14 @@ camera.annotate_foreground = Color('white')
 camera.annotate_text_size = 32
 text = "Grace's GardenPi " + datetime.datetime.now().strftime("%x,%X")
 pictureName = "/home/pi/Desktop/gardenpi_files/pictures/Picture_"+datetime.datetime.now().strftime("%m-%d-%y_%X")+".jpg"
+f = open("/home/pi/Desktop/gardenpi_files/picturelist.txt","a")
+f.write("Picture_"+datetime.datetime.now().strftime("%m-%d-%y_%X")+".jpg\n")
+f.close()
 camera.annotate_text = text
 sleep(5)
 camera.capture(pictureName)
 
-f = open("/home/pi/Desktop/gardenpi_files/picturelist.txt","a")
-f.write("Picture_"+datetime.datetime.now().strftime("%m-%d-%y_%X")+".jpg\n")
-f.close()
+
 
 
 #camera.start_recording('/home/pi/Desktop/gardenpi_files/pictures/video.h264')
