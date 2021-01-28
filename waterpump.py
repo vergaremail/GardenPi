@@ -52,7 +52,7 @@ def pump1On():
     relay1.on()
     time.sleep(pump1_duration)
     relay1.off()
-    f = open("pumprecord.csv","a")
+    f = open("/home/pi/Desktop/gardenpi_files/pumprecord.csv","a")
     f.write(datetime.datetime.now().strftime("%x,%X,")+"Pump 1,"+str(pump1_duration)+"\n")
     f.close()
    
