@@ -23,9 +23,6 @@ f.close()
 camera.annotate_text = text
 camera.capture(pictureName)
 
-
-
-
 #camera.start_recording('/home/pi/Desktop/gardenpi_files/pictures/video.h264')
 #sleep(5)
 #camera.stop_recording()
