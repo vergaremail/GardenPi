@@ -15,5 +15,5 @@ H = A.H
 T = A.T
 
 f = open("/home/pi/Desktop/gardenpi_files/humidityandtemp.csv","a")
-f.write(datetime.datetime.now().strftime("%x,%X,")+"{0:0.1f},{1:0.1f}".format(T, H)+"\n")
+f.write(datetime.datetime.now().strftime('%d %m %Y %H %M %S,')+"{0:0.1f},{1:0.1f}".format(T, H)+"\n")
 f.close()
